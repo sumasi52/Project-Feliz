@@ -1,0 +1,10 @@
+#puzzle {
+ margin: 100px auto;
+ width: 400px;
+ position: relative;
+ list-style: none;
+}
+#puzzle li {
+ cursor: pointer;
+ position: absolute;
+}
