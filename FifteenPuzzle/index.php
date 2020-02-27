@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>FifteenPuzzle</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -19,7 +19,7 @@
 </head>
 <body style="background-color:#1C2331;">
 <nav class="navbar navbar-dark unique-color">
-    <a class="navbar-brand" href="../home">Home</a>
+    <a class="navbar-brand" href="../home"><strong>Home</strong></a>
 </nav>
 <?php $blank = "<>"; $filename = '../status.txt';
 $str = file('../status.txt');
@@ -81,16 +81,16 @@ $Data = explode($blank,$str[0]);
             for(i=0; i<15; i++) {
                 var x = parseInt($('#'+i).css('left'))/100;var y = parseInt($('#'+i).css('top'))/100;var clearX = i%4;var clearY = Math.floor(i/4)
                 if((clearX == x)&&(clearY == y)) {
-                    clear ++;}}if(!(15 <= clear)) {clear = 0;} else {alert("Clear! KeyWord 「Arcana」");}});});</script><?php
+                    clear ++;}}if(!(15 <= clear)) {clear = 0;} else {alert("Clear! KeyWord 「Eye」");}});});</script><?php
 if(!empty($_POST['answer'])) {$answer = $_POST['answer'];
-    if ($answer == "Arcana") {$Data[0] = 1;echo "<div class=\"alert alert-success text-center\" role=\"alert\">正解しました. 「Arcana」が開放されました.</div>";} else {
+    if ($answer == "Eye") {$Data[0] = 2;$Data[1] = 1;echo "<div class=\"alert alert-success text-center\" role=\"alert\">正解しました. 「Eye」が開放されました.</div>";} else {
         echo "<div class=\"alert alert-danger text-center\" role=\"alert\">答えが違います</div>";}} ?>
 <!-- Start your project here--><!-- Material form login --><div class="container-fluid"><div class="row"><!--Grid column--><div class="col-4 col-md-4"></div><div class="col-4 col-md-4">
             <!-- Form -->
             <div class="rounded-bottom  #c0c0c0 text-center  pb-0">
                 <form class="text-center" style="color: #757575;" action="index.php" method="post">
                     <label for="exampleForm2"></label>
-                    <input type="text" id="exampleForm2" name="answer" class="form-control">
+                    <input type="text" id="exampleForm2" name="answer" class="form-control" style="text-align:center">
                     <!-- Sign in button -->
                     <!-- Form -->
             </div>
@@ -112,12 +112,11 @@ if(!empty($_POST['answer'])) {$answer = $_POST['answer'];
 <script type="text/javascript" src="../home/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../home/js/mdb.min.js"></script>
-<h4 class="text-white text-center">1->15</h4>
 <ul id="puzzle"></ul>
 </body></html>
 <?php
 foreach($Data as $value){//配列の数ループ
-    if($value == 0 || $value == 1) {
+    if($value == 0 || $value == 1 || $value == 2) {
         $fp = fopen($filename, 'a');
         fwrite($fp,$value.$blank );//データをテキストに書き込み
         fclose($fp);

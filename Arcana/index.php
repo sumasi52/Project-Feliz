@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Arcana</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -23,7 +23,7 @@
 
 <body style="background-color:#1C2331;">
 <nav class="navbar navbar-dark unique-color">
-    <a class="navbar-brand" href="../home">Home</a>
+    <a class="navbar-brand" href="../home"><strong>Home</strong></a>
 </nav>
 
 <?php
@@ -40,9 +40,9 @@ $Data = explode($blank,$str[0]);	//受け取ったデータを分割して配列
 if(!empty($_POST['answer'])) {
     $answer = $_POST['answer'];
     if ($answer == "THE HANGED MAN") {
-        $Data[2] = 1;
+        $Data[11] = 2;$Data[13] = 1;
         echo "<div class=\"alert alert-success text-center\" role=\"alert\">
-  正解しました
+  正解しました． 「Oznabrag」が解放されました．
 </div>";
     } else {
         echo "<div class=\"alert alert-danger text-center\" role=\"alert\">
@@ -83,11 +83,7 @@ if(!empty($_POST['answer'])) {
                     <form class="text-center" style="color: #757575;" action="index.php" method="post">
 
                         <label for="exampleForm2"></label>
-                        <input type="text" id="exampleForm2" name="answer" class="form-control">
-
-                        <!-- Sign in button -->
-
-                        <!-- Form -->
+                        <input type="text" id="exampleForm2" name="answer" class="form-control" style="text-align:center" placeholder="THE □□□□□□ □□□" >
 
                 </div>
                 </div>
@@ -120,7 +116,7 @@ if(!empty($_POST['answer'])) {
 <?php
 
 foreach($Data as $value){//配列の数ループ
-    if($value == 0 || $value == 1) {
+    if($value == 0 || $value == 1 || $value == 2) {
         $fp = fopen($filename, 'a');
         fwrite($fp,$value.$blank );//データをテキストに書き込み
         fclose($fp);
