@@ -2,13 +2,7 @@
 
 <?php
 $filename = 'chaos.txt';
-
-
 $str = file($filename);//テキストを配列として読み込み
-
-$fp = fopen($filename, 'w');
-fwrite($fp,"");//データをテキストに書き込み
-fclose($fp);
 
 if($str[0]==1) {
     echo("
@@ -81,12 +75,8 @@ Mail [<a href=\"mailto:kurata@rinc.or.jp\">kurata@rinc.or.jp</a>]  Home [<a href
 </pre></body></html>
 ");
 }else{
-    echo("aaa");
+    header('Location: 404.html');
+    exit;
 }
-
-
-$fp = fopen($filename, 'a');
-fwrite($fp,$str[0] );//データをテキストに書き込み
-fclose($fp);
 ?>
 

@@ -26,7 +26,7 @@
 
             <div class="mx-auto">
                 <a href="../ChaosPages/c<?php echo(mt_rand(1, 21)) ?>.php">
-                <img src="img/c1.jpg" class="img-fluid" alt="smaple image" >
+                <img src="img/c15.jpg" class="img-fluid" alt="smaple image" >
                 </a>
             </div>
 

@@ -1,5 +1,4 @@
 <?php
-
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -26,7 +25,10 @@
 
             <div class="mx-auto">
                 <a href="../ChaosPages/c<?php echo(mt_rand(1, 21)) ?>.php">
-                <img src="img/c1.jpg" class="img-fluid" alt="smaple image" >
+                    <map name="redball">
+                        <area shape="circle" coords="620,690,45" href="../home" alt="隠しリンク例" />
+                    </map>
+                <img usemap="#redball" src="img/c4.jpg" class="img-fluid" alt="smaple image" >
                 </a>
             </div>
 
@@ -51,29 +53,5 @@
     </html>
 
 <?php
-
-foreach($Data as $value){//配列の数ループ
-    if($value == 0 || $value == 1 || $value == 2) {
-        $fp = fopen($filename, 'a');
-        fwrite($fp,$value.$blank );//データをテキストに書き込み
-        fclose($fp);
-    }else{
-        $fp = fopen($filename, 'a');
-        fwrite($fp,$value );//データをテキストに書き込み
-        fclose($fp);
-    }
-}
-
-foreach($Shop as $value){//配列の数ループ
-    if(!empty($_POST['$value'])) {
-        $fp = fopen('../shop.txt', 'a');
-        fwrite($fp,$value.$blank );//データをテキストに書き込み
-        fclose($fp);
-    }else{
-        $fp = fopen('../shop.txt', 'a');
-        fwrite($fp,$value );//データをテキストに書き込み
-        fclose($fp);
-    }
-}
 
 ?>
