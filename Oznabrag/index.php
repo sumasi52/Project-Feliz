@@ -41,7 +41,7 @@
         if ($answer == "garbanzo" || $answer == "ガルバンゾ" || $answer == "Garbanzo") {
             $Data[13] = 2;
             echo "<div class=\"alert alert-success text-center\" role=\"alert\">
-  正解しました. 「スーツケース購入ページ」が解放されました．
+  正解しました. 「イヤホン購入ページ」が解放されました．
 </div>";
         } else {
             echo "<div class=\"alert alert-danger text-center\" role=\"alert\">
@@ -139,7 +139,7 @@
                         <select class=\"form-control\" id=\"exampleForm2\" name=\"shop_answer\">
                             <option>eイヤホンに試聴しに行く</option>
                             <option>1番がいいな、父さん（色はLINE）</option>
-                            <option>2番が欲しいよ、パパ(サイズはLINE)</option>
+                            <option>2番が欲しいよ、パパ</option>
                             <option>3番はいい感じだね、おとっつあん</option>
                             <option>4番が素晴らしい、頼むよ父上</option>
                             <option>5番ですぜ親父！</option>
@@ -151,7 +151,8 @@
                     
                     
                     ");}else{echo("
-                    <div class=\"col-md-6 col-sm-10 px-1\">
+                    <div class=\"col-2\"><p></p></div>
+                    <div class=\"view col-8\">
                         <a>
                         <div class=\"view\">
                     <img src=\"img/zo.jpg\" class=\" img-fluid \" alt=\"smaple image\" >
@@ -165,8 +166,9 @@
                     <label for=\"exampleForm2\">
                         <input type=\"text\" id=\"exampleForm2\" name=\"answer\" class=\"form-control\" style=\"text-align:center\">
                     </label>
+                    </form>
+                    </div>
 
-            </div>
                     ");} ?>
 
 

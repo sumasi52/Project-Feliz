@@ -74,7 +74,7 @@
                 <form class="text-center" style="color: #757575;" action="index.php" method="post">
 
                     <label for="exampleForm2">
-                        <input type="text" id="exampleForm2" name="answer1" class="form-control" style="text-align:center">
+                        <input type="text" id="exampleForm2" name="answer" class="form-control" style="text-align:center">
                     </label>
 
             </div>

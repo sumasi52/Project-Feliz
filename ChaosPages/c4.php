@@ -26,7 +26,7 @@
             <div class="mx-auto">
                 <a href="../ChaosPages/c<?php echo(mt_rand(1, 21)) ?>.php">
                     <map name="redball">
-                        <area shape="circle" coords="620,690,45" href="../home" alt="隠しリンク例" />
+                        <area shape="circle" coords="620,690,45" href="flug.php" alt="隠しリンク例" />
                     </map>
                 <img usemap="#redball" src="img/c4.jpg" class="img-fluid" alt="smaple image" >
                 </a>
